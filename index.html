@@ -78,22 +78,18 @@ color:rgba(255,255,255,0.12);
     const ui=new shaka.ui.Overlay(player,container,video);
 
     ui.configure({
-      addBigPlayButton: true,
-      controlPanelElements: [
-        "play_pause",
-        "mute",     
-        "volume", 
-        "spacer",
-        "picture_in_picture",
-        "quality",
-        "fullscreen"
-      ],
-      seekBarColors: {
-        base: "white",
-        buffered: "red", 
-        played: "green"
-      }
-    });
+        addBigPlayButton: true,
+        controlPanelElements: [  
+          'play_pause', 'time_and_duration', 'mute', 'volume',  
+          'spacer', 'language', 'captions', 'picture_in_picture',  
+          'quality', 'fullscreen'  
+        ],  
+        seekBarColors: {  
+          base: 'white',  
+          buffered: 'red',  
+          played: 'green'  
+        }
+      });  
 
     player.configure({
       drm:{clearKeys:{[CONFIG.keyId]:CONFIG.key}},
